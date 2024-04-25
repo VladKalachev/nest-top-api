@@ -1,8 +1,11 @@
-export class ReviewModel {
-  _id: string;
+export class CreateReviewDto {
   name: string;
+
   title: string;
+
   description: string;
+
   rating: number;
-  createAt: Date;
+
+  productId: string;
 }
