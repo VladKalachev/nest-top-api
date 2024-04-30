@@ -14,7 +14,7 @@ export class ReviewService {
   ) {}
 
   async getAll(): Promise<DocumentType<ReviewModel>[]> {
-    return this.reviewModel.find();
+    return this.reviewModel.find({}).exec();
   }
 
   async create(dto: CreateReviewDto): Promise<DocumentType<ReviewModel>> {
