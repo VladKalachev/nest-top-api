@@ -9,6 +9,7 @@ import { getMongoConfig } from './configs/mongo.config';
 import { HhModule } from './hh/hh.module';
 import { FilesModule } from './files/files.module';
 import { SitemapModule } from './sitemap/sitemap.module';
+import { TelegramModule } from './telegram/telegram.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { SitemapModule } from './sitemap/sitemap.module';
     HhModule,
     FilesModule,
     SitemapModule,
+    TelegramModule,
   ],
   controllers: [],
   providers: [],
