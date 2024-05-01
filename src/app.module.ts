@@ -10,6 +10,7 @@ import { HhModule } from './hh/hh.module';
 import { FilesModule } from './files/files.module';
 import { SitemapModule } from './sitemap/sitemap.module';
 import { TelegramModule } from './telegram/telegram.module';
+import { getTelegramConfig } from './configs/telegram.config';
 
 @Module({
   imports: [
@@ -26,7 +27,11 @@ import { TelegramModule } from './telegram/telegram.module';
     HhModule,
     FilesModule,
     SitemapModule,
-    TelegramModule,
+    TelegramModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: getTelegramConfig,
+    }),
   ],
   controllers: [],
   providers: [],
