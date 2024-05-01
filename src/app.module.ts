@@ -8,6 +8,7 @@ import { TypegooseModule } from 'nestjs-typegoose';
 import { getMongoConfig } from './configs/mongo.config';
 import { HhModule } from './hh/hh.module';
 import { FilesModule } from './files/files.module';
+import { SitemapModule } from './sitemap/sitemap.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { FilesModule } from './files/files.module';
     ReviewModule,
     HhModule,
     FilesModule,
+    SitemapModule,
   ],
   controllers: [],
   providers: [],
